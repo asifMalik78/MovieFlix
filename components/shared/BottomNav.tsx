@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { navOptions } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,9 +43,14 @@ function BottomNav() {
             (pathname.includes(option.route) && option.route.length > 1) ||
             pathname === option.route;
           return (
-            <li key={idx} className={`${option.selected && "nav-active"} py-2`}>
-              <Link href={`${option.route}`} className="flex items-center justify-center">
-                <Image src={option.path} alt="icon" height={24} width={24} />
+            <li key={idx} className={`${option.selected && "bottom-nav-active"} py-2`}>
+              <Link
+                href={`${option.route}`}
+                className="flex items-center justify-center"
+              >
+                <div className="relative w-[1.5rem] h-[1.5rem]">
+                  <Image src={option.path} alt="icon" fill={true} />
+                </div>
               </Link>
             </li>
           );

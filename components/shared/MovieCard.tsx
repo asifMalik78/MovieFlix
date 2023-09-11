@@ -24,7 +24,7 @@ function MovieCard({ id, name, imagePath, date, rating , link , favourite , filt
   return (
     <div className="flex flex-col">
     <Link href={`/${link}/${id}`} className="select-none">
-      <div className="card relative w-[17.8rem] md:w-[17.5rem] h-[27rem] md:h-[26.25rem] border-2 border-[#292929] rounded-xl  shadow-sm overflow-hidden">
+      <div className="card relative w-[14.5rem] h-[22rem] sm:w-[17.8rem] md:w-[17.5rem] sm:h-[26rem] md:h-[26.25rem] border-2 border-[#292929] rounded-xl  shadow-sm overflow-hidden">
         {imagePath ? (
           <Image
             src={`https://image.tmdb.org/t/p/original${imagePath}`}
