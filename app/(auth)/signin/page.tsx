@@ -3,20 +3,19 @@ import Signin from "@/components/form/Signin";
 import Signup from "@/components/form/Signup";
 import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tabs, TabsContent } from "@radix-ui/react-tabs";
-import Image from "next/image";
+import Img from "@/components/shared/LazyLoadImg";
 import React  from "react";
 import { Toaster } from "react-hot-toast";
 
 
 function page() {
   return (
-    <div className="relative w-screen h-screen">
-      <div className="w-screen h-screen login-bg ">
-        <Image
+    <div className="relative w-screen h-screen overflow-y-hidden">
+      <div className="login-bg">
+        <Img
           src="/assets/login_bg.jpg"
           alt="bg-image"
-          fill={true}
-          className="hidden object-cover md:block"
+          className="hidden object-contain w-screen h-full md:block"
         />
         <div className="bottom-gradient"></div>
       </div>
